@@ -1,9 +1,10 @@
 # Inicando projeto
 
-## Scripts necessarios
+## Descrição
 
-### `npm install`
-### `npm start`
+#### Instalação
+ `npm install`
+ `npm start`
 
 Inserir a chave da api no arquivo index.js dentro da pasta Filme e da pasta Home
 
