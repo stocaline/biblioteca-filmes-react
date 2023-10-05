@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 import './filme-info.css';
 import api from '../../services/api'
 
+const apiKey = process.env.REACT_APP_API_KEY;
+
 function Filme() {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -14,7 +16,7 @@ function Filme() {
         async function loadFilmes() {
             await api.get(`/movie/${id}`, {
                 params: {
-                    api_key: "",
+                    api_key: `${apiKey}`,
                     language: "pt-BR",
                 }
             })

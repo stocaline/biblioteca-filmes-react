@@ -3,6 +3,8 @@ import api from '../../services/api';
 import { Link } from 'react-router-dom';
 import './home.css';
 
+const apiKey = process.env.REACT_APP_API_KEY;
+
 function Home() {
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -12,7 +14,7 @@ function Home() {
         async function loadFilmes() {
             const response = await api.get("movie/now_playing", {
                 params: {
-                    api_key: "",
+                    api_key: `${apiKey}`,
                     language: "pt-BR",
                     page: 1,
                 }
