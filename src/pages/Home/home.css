@@ -1,4 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .lista-filmes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: last baseline;
+    justify-content: space-evenly;
     width: 800px;
     margin: 14px auto;
 }
@@ -11,7 +22,7 @@
 }
 
 .lista-filmes article{
-    width: 100%;
+    width: 250px;
     background-color: #fff;
     padding: 15px;
     border-radius: 4px;
@@ -45,4 +56,23 @@
     color: #fff;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.btn-more-itens {
+    width: 30%;
+    margin-right: 12px;
+    margin: 14px;
+    margin-left: 0;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn-more-itens:hover{
+    background-color: rgb(42, 71, 165);
+    color: #fff;
 }
