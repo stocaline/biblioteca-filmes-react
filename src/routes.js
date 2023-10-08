@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Filme from './pages/Filme';
 import Favoritos from './pages/Favoritos';
+import Search from './pages/Search';
 
 import Erro from './pages/Erro'
 
@@ -16,6 +17,7 @@ function RoutesApp(){
             <Route path="/" element={ <Home/> } />
             <Route path="/filme/:id" element={ <Filme/> } />
             <Route path="/favoritos" element={ <Favoritos/> }/>
+            <Route path="/search" element={ <Search/> }/>
 
             <Route path="*" element={<Erro/>}/>
         </Routes>

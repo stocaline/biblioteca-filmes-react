@@ -18,18 +18,25 @@ header {
     font-weight: bold;
 }
 
-.favoritos {
-    text-decoration: none;
-    cursor: pointer;
-    background-color: #fff;
-    padding: 5px 14px;
-    color: #000000;
-    border-radius: 4px;
+.nav-btns{
+    display: flex;
+    gap: 20px;
 }
 
-.input {
-    padding: 5px;
-    background-color: #fff;
-    border: none;
+.nav-btn {
+    display: flex;
+    align-content: center;
+    gap: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 7px 10px;
+    color: #ffffff;
+    transition: .5s ease;
     border-radius: 10px;
+}
+
+.nav-btn:hover {
+    background-color: #fff;
+    color: #000000;
 }

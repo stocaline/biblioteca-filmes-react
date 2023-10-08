@@ -1,19 +1,20 @@
 import './header.css'
 import { Link } from 'react-router-dom';
+import { FiSearch, FiStar } from "react-icons/fi";
 
 function Header() {
-
-    function searchMovie(movieName) {
-        const url = 'https://api.themoviedb.org/3/search/movie?query=transformers&include_adult=false&language=en-US&page=1';
-        console.log(movieName)
-    }
 
     return (
         <header>
             <Link className='logo' to='/'>StocaFlix</Link>
-            <div>
-                <Link className='favoritos' to='/favoritos'>Meus Filmes</Link>
-                <input className='input' onSubmit={searchMovie} placeholder='Pesquisar' />
+            <div className='nav-btns'>
+                <Link className='nav-btn' to='/favoritos'>
+                    <FiStar />
+                    Favoritos
+                </Link>
+                <Link className='nav-btn' to='/search'>
+                    <FiSearch />
+                </Link>
             </div>
         </header>
     )
