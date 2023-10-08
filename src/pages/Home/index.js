@@ -37,18 +37,27 @@ function Home() {
 
     return (
         <div className="container">
-            <div className="lista-filmes">
-                {filmes.map((filme) => {
-                    return (
-                        <article key={filme.id}>
-                            <strong>{filme.title}</strong>
-                            <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
-                            <Link to={`/filme/${filme.id}`}>Acessar</Link>
-                        </article>
-                    )
-                })}
+            <div className="main">
+                <div className="main-content">
+                    <h1>Descubra, favorite e compartilhe seus filmes favoritos!"</h1>
+                    <p>Descubra os melhores filmes e crie sua lista de favoritos personalizada em nosso site de cinema. Encontre, favorite e compartilhe suas pérolas cinematográficas.</p>
+                </div>
+                <img src="/imagem1.png"/>
             </div>
-            <button className='btn-more-itens' onClick={() => loadFilmes()}>Carregar mais</button>
+            <div className="content">
+                <div className="lista-filmes">
+                    {filmes.map((filme) => {
+                        return (
+                            <article key={filme.id}>
+                                <strong>{filme.title}</strong>
+                                <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
+                                <Link to={`/filme/${filme.id}`}>Acessar</Link>
+                            </article>
+                        )
+                    })}
+                </div>
+                <button className='btn-more-itens' onClick={() => loadFilmes()}>Carregar mais</button>
+            </div>
         </div>
     )
 }

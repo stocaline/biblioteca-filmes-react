@@ -4,8 +4,7 @@ Este é um site que oferece a você a oportunidade de explorar uma ampla gama de
  <img src="" width="50%">
 
 ## 📕 Como usar
-Este projeto está hospedado no Versel. Você pode acessá-lo em "Em Breve"
-ou baixe o projeto e siga os passos a baixo.
+Este projeto está hospedado no Versel. Você pode acessá-lo em https://biblioteca-filmes-react-jade.vercel.app/ ou baixe o projeto e siga os passos a baixo.
 
 #### Instalação
  `npm install` - Para instalar as bibliotecas do projeto
