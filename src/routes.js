@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import Filme from './pages/Filme';
-import Favoritos from './pages/Favoritos';
+import MovieView from './pages/MovieView';
+import Bookmarks from './pages/bookmarks';
 import Search from './pages/Search';
 
-import Erro from './pages/Erro'
+import Error from './pages/Error'
 
 import Header from './components/Header';
 
@@ -15,11 +15,11 @@ function RoutesApp(){
         <Header/>
         <Routes>
             <Route path="/" element={ <Home/> } />
-            <Route path="/filme/:id" element={ <Filme/> } />
-            <Route path="/favoritos" element={ <Favoritos/> }/>
+            <Route path="/filme/:id" element={ <MovieView/> } />
+            <Route path="/favoritos" element={ <Bookmarks/> }/>
             <Route path="/search" element={ <Search/> }/>
 
-            <Route path="*" element={<Erro/>}/>
+            <Route path="*" element={<Error/>}/>
         </Routes>
         </BrowserRouter>
     )

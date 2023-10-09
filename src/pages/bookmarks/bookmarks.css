@@ -1,0 +1,54 @@
+.bookmarks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bookmarks h1{
+    margin-bottom: 100px;
+}
+
+.bookmarks span{
+    font-size: 18px;
+}
+
+.bookmarks ul{
+    width: 720px;
+}
+
+.bookmarks ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: .5px solid black;
+}
+
+.bookmarks div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookmarks div a{
+    text-decoration: none;
+    color: #116feb;
+    margin-right: 14px
+}
+
+.bookmarks button {
+    border: 0;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: crimson;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.bookmarks button:hover {
+   transform: translateY(-5px);
+}

@@ -6,11 +6,11 @@ import './home.css';
 const apiKey = process.env.REACT_APP_API_KEY;
 
 function Home() {
-    const [filmes, setFilmes] = useState([]);
+    const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(true);
     const [page, setPage] = useState(1)
 
-    async function loadFilmes() {
+    async function loadMovies() {
         const response = await api.get("movie/now_playing", {
             params: {
                 api_key: `${apiKey}`,
@@ -19,12 +19,12 @@ function Home() {
             }
         })
         setPage(page + 1)
-        setFilmes([...filmes, ...response.data.results.slice(0, 10)])
+        setMovies([...movies, ...response.data.results.slice(0, 10)])
         setLoading(false);
     }
 
     useEffect(() => {
-        loadFilmes()
+        loadMovies()
     }, [])
 
     if (loading) {
@@ -42,21 +42,21 @@ function Home() {
                     <h1>Descubra, favorite e compartilhe seus filmes favoritos!"</h1>
                     <p>Descubra os melhores filmes e crie sua lista de favoritos personalizada em nosso site de cinema. Encontre, favorite e compartilhe suas pérolas cinematográficas.</p>
                 </div>
-                <img src="/imagem1.png"/>
+                <img src="/imagem1.png" alt='imagem de camera de cinema'/>
             </div>
             <div className="content">
-                <div className="lista-filmes">
-                    {filmes.map((filme) => {
+                <div className="movies-list">
+                    {movies.map((movie) => {
                         return (
-                            <article key={filme.id}>
-                                <strong>{filme.title}</strong>
-                                <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
-                                <Link to={`/filme/${filme.id}`}>Acessar</Link>
+                            <article key={movie.id}>
+                                <strong>{movie.title}</strong>
+                                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                                <Link to={`/filmes/${movie.id}`}>Acessar</Link>
                             </article>
                         )
                     })}
                 </div>
-                <button className='btn-more-itens' onClick={() => loadFilmes()}>Carregar mais</button>
+                <button className='btn-more-itens' onClick={() => loadMovies()}>Carregar mais</button>
             </div>
         </div>
     )
